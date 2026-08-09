@@ -8,3 +8,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Docker image
         run: docker build -t flask-app .
+      - name: Install dependencies
+        run: pip install flask pytest
+
+      - name: Run tests
+        run: pytest
