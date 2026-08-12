@@ -18,3 +18,10 @@ jobs:
         with:
           username: ${ahad3594}
           password: ${dckr_pat_wIkc3JQKZJtL9vz0-6is6lSnTvk}
+    
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.ahad3594 }}/flask-docker-app:latest
